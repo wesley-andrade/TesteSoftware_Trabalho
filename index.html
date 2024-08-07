@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculadora JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.1/math.min.js"></script>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main data-theme="dark">
+      <header class="flex align-center justify-between">
+        <h1>Calc.js</h1>
+        <button id="themeSwitcher">Trocar Tema Escuro/Claro</button>
+        <button id="toggleHistory">Mostrar/Ocultar Histórico</button>
+      </header>
+      <input
+        type="text"
+        id="input"
+        placeholder="Insira os números que deseja calcular"
+      />
+      <section
+        id="powerRootInputs"
+        class="flex align-center justify-between"
+        style="display: none"
+      >
+        <input type="text" id="base" placeholder="Base" />
+        <input type="text" id="exponent" placeholder="Expoente" />
+      </section>
+      <section
+        id="unitConversionInputs"
+        class="flex align-center justify-between"
+        style="display: none"
+      >
+        <select id="unitType">
+          <option value="cmToM">CM para M</option>
+          <option value="mToCm">M para CM</option>
+          <option value="lToMl">L para ML</option>
+          <option value="mlToL">ML para L</option>
+        </select>
+        <input type="text" id="unitValue" placeholder="Insira o valor" />
+      </section>
+      <div id="keys">
+        <button id="clear">C</button>
+        <button class="charKey" data-value=" ( ">(</button>
+        <button class="charKey" data-value=" ) ">)</button>
+        <button class="charKey" data-value=" / ">/</button>
+        <button class="charKey" data-value="7">7</button>
+        <button class="charKey" data-value="8">8</button>
+        <button class="charKey" data-value="9">9</button>
+        <button class="charKey" data-value=" * ">*</button>
+        <button class="charKey" data-value="4">4</button>
+        <button class="charKey" data-value="5">5</button>
+        <button class="charKey" data-value="6">6</button>
+        <button class="charKey" data-value=" - ">-</button>
+        <button class="charKey" data-value="1">1</button>
+        <button class="charKey" data-value="2">2</button>
+        <button class="charKey" data-value="3">3</button>
+        <button class="charKey" data-value=" + ">+</button>
+        <button class="charKey" data-value="0">0</button>
+        <button class="charKey" data-value=".">.</button>
+        <button class="charKey" data-value=" % ">%</button>
+        <button id="equal">=</button>
+      </div>
+      <section class="flex align-center justify-between">
+        <select id="calcType">
+          <option value="none">Cálculos Básicos</option>
+          <option value="mean">Média</option>
+          <option value="median">Mediana</option>
+          <option value="mode">Moda</option>
+          <option value="power">Potência</option>
+          <option value="root">Raiz</option>
+          <option value="length">Conversor Comprimento</option>
+          <option value="volume">Conversor Volume</option>
+        </select>
+        <button id="copyToClipboard">Copiar</button>
+        <input type="text" id="result" disabled placeholder="Resultado" />
+      </section>
+      <section id="history">
+        <h2>Histórico de Cálculos</h2>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+  </body>
+</html>
