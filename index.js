@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const historySection = document.getElementById("history");
   const historyList = document.getElementById("historyList");
   const toggleHistoryButton = document.getElementById("toggleHistory");
+  const decimalButton = document.querySelector('.charKey[data-value="."]');
   let calculationHistory = [];
 
   //Adiciona um evento para alternar entre tema claro e escuro ao clicar no botão de troca de tema.
@@ -230,6 +231,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //Função para mudar o valor do '.' para ',' e vise versa
+  function updateDecimalButton() {
+    const selectedCalcType = calcType.value;
+    if (["mean", "median", "mode"].includes(selectedCalcType)) {
+      decimalButton.dataset.value = ",";
+      decimalButton.textContent = ",";
+    } else {
+      decimalButton.dataset.value = ".";
+      decimalButton.textContent = ".";
+    }
+  }
+
   //Adiciona um evento para mostrar/ocultar os campos com base no tipo de cálculo selecionado.
   calcType.addEventListener("change", () => {
     const selectedCalcType = calcType.value;
@@ -256,6 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
       unitType.innerHTML =
         '<option value="lToMl">L para ML</option><option value="mlToL">ML para L</option>';
     }
+    updateDecimalButton();
   });
 
   //Dispara um evento de mudança para configurar o estado inicial da interface.
