@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleHistoryButton = document.getElementById("toggleHistory");
   const decimalButton = document.querySelector('.charKey[data-value="."]');
   let calculationHistory = [];
+  let activeInput = input;
 
   //Adiciona um evento para alternar entre tema claro e escuro ao clicar no botão de troca de tema.
   themeSwitcher.addEventListener("click", () => {
@@ -34,13 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
     baseInput.value = "";
     exponentInput.value = "";
     unitValueInput.value = "";
-    input.focus();
   });
 
   //Adiciona um evento para inserir o valor dos botões de caracteres no campo de entrada.
   document.querySelectorAll(".charKey").forEach((charKeyBtn) => {
     charKeyBtn.addEventListener("click", () => {
-      input.value += charKeyBtn.dataset.value;
+      activeInput.value += charKeyBtn.dataset.value;
     });
   });
 
@@ -49,6 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
   baseInput.addEventListener("keydown", handleKeydown);
   exponentInput.addEventListener("keydown", handleKeydown);
   unitValueInput.addEventListener("keydown", handleKeydown);
+
+  //Adiciona um evento para definir o input ativo quando clicado
+  input.addEventListener("focus", () => (activeInput = input));
+  baseInput.addEventListener("focus", () => (activeInput = baseInput));
+  exponentInput.addEventListener("focus", () => (activeInput = exponentInput));
+  unitValueInput.addEventListener(
+    "focus",
+    () => (activeInput = unitValueInput)
+  );
 
   //Adiciona um evento para calcular o resultado ao clicar no botão de igual.
   document.getElementById("equal").addEventListener("click", calculate);
@@ -224,10 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleHistoryButton.addEventListener("click", () => {
     if (historySection.style.display === "block") {
       historySection.style.display = "none";
-      toggleHistoryButton.textContent = "Mostrar Histórico";
     } else {
       historySection.style.display = "block";
-      toggleHistoryButton.textContent = "Ocultar Histórico";
     }
   });
 
