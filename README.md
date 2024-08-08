@@ -1,56 +1,74 @@
 # Calculadora JS
 
-Este projeto é uma calculadora desenvolvida com HTML, CSS e JavaScript. Ela suporta uma variedade de cálculos e funcionalidades, incluindo operações básicas, cálculos de média, mediana e moda, além de potenciação, raízes e conversão de unidades. A calculadora também oferece a opção de alternar entre temas claro e escuro e exibir um histórico de cálculos.
-Feita com base em um antigo projeto meu e melhorada por Luan Vitoriano, Riyuiti Mizuno, Alisson Almeida e eu
+Este projeto é uma calculadora web interativa desenvolvida com HTML, CSS e JavaScript. Ela oferece uma ampla gama de funcionalidades, incluindo operações matemáticas básicas, cálculos estatísticos, potenciação, raízes e conversão de unidades. O design da calculadora permite que você alterne entre temas claro e escuro, e também acompanhe seu histórico de cálculos realizados. A calculadora foi desenvolvida a partir de um projeto feito por mim, com melhorias adicionadas por Luan Vitoriano, Riyuiti Mizuno, Alisson Almeida e por mim.
 
 ## Funcionalidades
 
-- **Cálculos Básicos**: Adição, subtração, multiplicação, divisão e operações matemáticas com parênteses.
-- **Média (Mean)**: Calcula a média dos números inseridos.
-- **Mediana (Median)**: Calcula a mediana dos números inseridos.
-- **Moda (Mode)**: Calcula a moda dos números inseridos.
-- **Potência (Power)**: Calcula a potência de um número com base em um expoente.
-- **Raiz (Root)**: Calcula a raiz de um número com base em um expoente.
-- **Conversão de Comprimento**: Converte entre centímetros e metros.
-- **Conversão de Volume**: Converte entre litros e mililitros.
-- **Histórico de Cálculos**: Exibe o histórico de cálculos realizados.
-- **Alternância de Tema**: Alterna entre o tema claro e escuro.
+- **Cálculos Básicos**: Realize adição, subtração, multiplicação, divisão e cálculos com parênteses.
+- **Cálculos Estatísticos**:
+  - **Média**: Calcula a média dos números inseridos.
+  - **Mediana**: Calcula a mediana dos números inseridos.
+  - **Moda**: Calcula a moda dos números inseridos.
+- **Potência e Raiz**:
+  - **Potência**: Calcula a potência de um número com base em um expoente.
+  - **Raiz**: Calcula a raiz de um número com base em um expoente.
+- **Conversão de Unidades**:
+  - **Comprimento**: Converte entre centímetros e metros.
+  - **Volume**: Converte entre litros e mililitros.
+- **Histórico de Cálculos**: Armazena e exibe o histórico das operações realizadas.
+- **Alternância de Tema**: Mude entre o tema claro e escuro para uma experiência visual personalizada.
+- **Tratamento de Erros**: Exibe uma mensagem de "Erro" em vez de resultados inválidos, como divisões por zero.
 
 ## Instruções de Uso
 
-1. **Abrir a Calculadora**:
+### 1. Abrir a Calculadora
 
-   - Abra o arquivo `index.html` em um navegador web.
+- Baixe ou clone o repositório para o seu computador.
+- Abra o arquivo `index.html` em um navegador web moderno.
 
-2. **Inserir Dados**:
+### 2. Inserir Dados e Realizar Cálculos
 
-   - **Cálculos Básicos**: Insira a expressão matemática no campo de entrada e pressione o botão `=` para obter o resultado.
-   - **Média, Mediana e Moda**: Selecione o tipo de cálculo no menu suspenso e insira os números separados por vírgulas no campo de entrada.
-   - **Potência e Raiz**: Selecione o tipo de cálculo apropriado e insira a base e o expoente nos campos correspondentes.
-   - **Conversão de Unidades**: Selecione o tipo de conversão e insira o valor no campo de entrada.
+- **Selecionar o Tipo de Cálculo**:
 
-3. **Alternar Tema**:
+  - Utilize o menu ao lado do botão de copiar para escolher o tipo de cálculo desejado: Básico, Média, Mediana, Moda, Potência, Raiz, Conversão de Comprimento ou Volume.
 
-   - Clique no botão `Trocar Tema Escuro/Claro` para alternar entre o tema claro e escuro.
+- **Inserir Números**:
 
-4. **Histórico de Cálculos**:
+  - **Cálculos Básicos**: Clique no campo de entrada (campo de texto) e insira sua expressão matemática. Use os botões numéricos e de operação para facilitar a inserção.
+  - **Média, Mediana e Moda**: Selecione a opção desejada no menu. Clique no campo de entrada (campo de texto) e insira os números separados por vírgulas.
+  - **Potência e Raiz**: Escolha "Potência" ou "Raiz" no menu. Clique nos campos de base (campo de texto) e expoente (campo de texto) para inserir os valores.
+  - **Conversão de Unidades**: Selecione "Comprimento" ou "Volume" no menu. Clique no campo de valor (campo de texto) e insira o número a ser convertido.
 
-   - Clique no botão `Mostrar/Ocultar Histórico` para exibir ou ocultar o histórico de cálculos realizados.
+- **Importante**:
+  - Para evitar erros, certifique-se de clicar no campo de entrada apropriado antes de digitar os valores. A calculadora registra o campo que você clicou como o ativo, e todos os valores inseridos serão direcionados para ele.
 
-5. **Copiar Resultado**:
+### 3. Executar o Cálculo
 
-   - Clique no botão `Copiar` para copiar o resultado atual para a área de transferência.
+- Pressione o botão `=` para calcular o resultado e exibi-lo no campo de resultado.
 
-6. **Limpar Campos**:
-   - Clique no botão `C` para limpar todos os campos de entrada e resultados.
+### 4. Alternar Tema
+
+- Clique no botão `Trocar Tema Escuro/Claro` para alternar entre o tema claro e escuro, ajustando a aparência conforme sua preferência.
+
+### 5. Exibir/Ocultar Histórico
+
+- Clique no botão `Mostrar/Ocultar Histórico` para visualizar ou esconder o histórico das operações realizadas. O histórico pode ser útil para acompanhar cálculos anteriores.
+
+### 6. Copiar Resultado
+
+- Após obter um resultado, clique no botão `Copiar` para copiar o resultado para a área de transferência e colá-lo em outro lugar, se necessário.
+
+### 7. Limpar Campos
+
+- Utilize o botão `C` para limpar todos os campos de entrada e o campo de resultado, permitindo iniciar um novo cálculo sem interferências dos valores anteriores.
 
 ## Requisitos
 
 - Navegador web moderno com suporte a HTML5, CSS3 e JavaScript.
 
-## Tecnologias Utilizadas
+## Estrutura do Projeto
 
-- **HTML**: Estrutura do conteúdo.
-- **CSS**: Estilos e layout.
-- **JavaScript**: Lógica e funcionalidades interativas.
-- **Math.js**: Biblioteca para avaliação de expressões matemáticas.
+- **HTML**: Estruturação do conteúdo, incluindo campos de entrada, botões e menus.
+- **CSS**: Estilização e layout, com suporte a temas claro e escuro.
+- **JavaScript**: Lógica para cálculo, manipulação do DOM e tratamento de eventos.
+- **Math.js**: Biblioteca utilizada para avaliação de expressões matemáticas complexas.
