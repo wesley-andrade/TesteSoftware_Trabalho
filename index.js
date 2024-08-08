@@ -231,6 +231,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //Adiciona um evento para copiar o resultado para a área de transferência ao clicar no botão de copiar.
+  document.getElementById("copyToClipboard").addEventListener("click", () => {
+    navigator.clipboard
+      .writeText(resultInput.value)
+      .then(() => {
+        const copyButton = document.getElementById("copyToClipboard");
+        copyButton.textContent = "Copiado";
+        setTimeout(() => {
+          copyButton.textContent = "Copiar";
+        }, 2000);
+      })
+      .catch((err) => {
+        console.error("Erro ao copiar para a área de transferência: ", err);
+      });
+  });
+
   //Função para mudar o valor do '.' para ',' e vise versa
   function updateDecimalButton() {
     const selectedCalcType = calcType.value;
