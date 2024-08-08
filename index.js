@@ -144,6 +144,10 @@ document.addEventListener("DOMContentLoaded", () => {
         default:
           result = evalExpression(input.value);
       }
+      if (isNaN(result) || !isFinite(result)) {
+        throw new Error("Resultado inválido");
+      }
+
       resultInput.value = result;
       addToHistory(`${input.value} = ${result}`);
       resultInput.classList.remove("error");
