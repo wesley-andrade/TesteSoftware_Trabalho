@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculadora completa com coversor de unidades e calculos estatistícos."
+    />
+    <meta name="keyords" content="Calculadora, Conversor de unidades" />
+    <meta name="author" content="Alisson, Wesley, Luan, Mizuno" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="assets/calculadora.png" />
     <title>Calculadora JS</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.1/math.min.js"></script>
     <script src="./index.js" defer></script>
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <main data-theme="dark">
@@ -90,4 +98,20 @@
       </section>
     </main>
   </body>
+  <script>
+    window.addEventListener("load", () => {
+      registerSW();
+    });
+
+    async function registerSW() {
+      if ("serviceWorker" in navigator) {
+        try {
+          console.log("estou tentando registrar o SW");
+          await navigator.serviceWorker.register("./service-worker.js");
+        } catch (e) {
+          console.log("SW registration failed");
+        }
+      }
+    }
+  </script>
 </html>

@@ -1,0 +1,17 @@
+{
+    "name": "Calc.js",
+    "short_name": "Calc",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "Calculadora com coversor de unidades",
+    "icons": [
+        {
+            "src": "/assets/calculadora.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
+  
