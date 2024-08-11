@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (ev.key === "Enter") {
       calculate();
     }
+    ev.target.scrollLeft = ev.target.scrollWidth;
   }
 
   //Função para realizar o cálculo com base no tipo selecionado.
