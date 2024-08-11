@@ -34,14 +34,15 @@
         type="text"
         id="input"
         placeholder="Insira os números que deseja calcular"
+        readonly
       />
       <section
         id="powerRootInputs"
         class="flex align-center justify-between"
         style="display: none"
       >
-        <input type="text" id="base" placeholder="Base" />
-        <input type="text" id="exponent" placeholder="Expoente" />
+        <input type="text" id="base" placeholder="Base" readonly />
+        <input type="text" id="exponent" placeholder="Expoente" readonly />
       </section>
       <section
         id="unitConversionInputs"
@@ -54,7 +55,12 @@
           <option value="lToMl">L para ML</option>
           <option value="mlToL">ML para L</option>
         </select>
-        <input type="text" id="unitValue" placeholder="Insira o valor" />
+        <input
+          type="text"
+          id="unitValue"
+          placeholder="Insira o valor"
+          readonly
+        />
       </section>
       <div id="keys">
         <button id="clear">C</button>
