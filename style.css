@@ -215,3 +215,10 @@ main[data-theme="light"] #themeSwitcher:hover, main[data-theme="light"] #toggleH
     font-size: 1rem;
   }
 }
+
+#topHistory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}

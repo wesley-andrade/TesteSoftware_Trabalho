@@ -16,8 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const historyList = document.getElementById("historyList");
   const toggleHistoryButton = document.getElementById("toggleHistory");
   const decimalButton = document.querySelector('.charKey[data-value="."]');
+  const clearHistoryButton = document.getElementById("clearHistory");
   let calculationHistory = [];
   let activeInput = input;
+
+  clearHistoryButton.addEventListener("click", clearHistory);
 
   //Adiciona um evento para alternar entre tema claro e escuro ao clicar no botão de troca de tema.
   themeSwitcher.addEventListener("click", () => {
@@ -242,6 +245,12 @@ document.addEventListener("DOMContentLoaded", () => {
   //Função para converter volume entre L e ML.
   function convertVolume(value, type) {
     return type === "lToMl" ? value * 1000 : value / 1000;
+  }
+
+  //Função para limpar o histórico de cálculos.
+  function clearHistory() {
+    calculationHistory = [];
+    updateHistory();
   }
 
   //Função para adicionar cálculos ao histórico e atualizar a lista de histórico.

@@ -1,6 +1,35 @@
 # Calculadora JS
 
-Este projeto é uma calculadora web interativa desenvolvida com HTML, CSS e JavaScript. Ela oferece uma ampla gama de funcionalidades, incluindo operações matemáticas básicas, cálculos estatísticos, potenciação, raízes e conversão de unidades. O design da calculadora permite que você alterne entre temas claro e escuro, e também acompanhe seu histórico de cálculos realizados. A calculadora foi desenvolvida a partir de um projeto feito por mim, com melhorias adicionadas por Luan Vitoriano, Riyuiti Mizuno, Alisson Almeida e por mim.
+## Introdução
+Este projeto é uma calculadora web interativa desenvolvida com HTML, CSS e JavaScript. Ela oferece uma ampla gama de funcionalidades, incluindo operações matemáticas básicas, cálculos estatísticos, potenciação, raízes e conversão de unidades. O design da calculadora permite que você alterne entre temas claro e escuro, e também acompanhe seu histórico de cálculos realizados. A calculadora foi desenvolvida a partir de um projeto feito por mim (Wesley), com melhorias adicionadas por Luan Vitoriano, Riyuiti Mizuno, Alisson Almeida.
+
+## Download do projeto
+Para baixar o projeto é necessário ter o git instaldo em sua maquina e rodar o seguinte comando em um diretorio escolhido para dowload:
+
+```
+git clone https://github.com/wesley-andrade/TesteSoftware_Trabalho.git
+```
+
+## Proposta dos stakeholders
+**Eu**, como grupo Matemático LTDA.
+**Proponho** construir um sistema de calculadora que inclua as seguintes funcionalidades (requisitos):
+1. Operações básicas (soma, subtração, multiplicação, divisão e porcentagem).
+2. Cálculos de média (média, mediana, moda) com um menu para escolha.
+3. Cálculos de potência (raízes e quadrados) com menu para selecionar o tipo de operação.
+4. Conversão de unidades (comprimento e volume) com menus para escolher tipo e unidade.
+5. Histórico de cálculos das operações básicas.
+6. Um menu principal para acessar todas essas opções.
+  
+**Para que** possamos fornecer uma ferramenta multifuncional que atenda às necessidades dos
+usuários.
+
+## Prototipação
+
+### Calculadora em tema light
+![Tela de prototipação tema light](/assets/light.png)
+
+### Calculadora em tema escuro
+![Tela de prototipação tema light](/assets/dark.png)
 
 ## Funcionalidades
 
@@ -43,7 +72,7 @@ Este projeto é uma calculadora web interativa desenvolvida com HTML, CSS e Java
   - Selecione "Adicionar à Tela Inicial" para criar um atalho para a calculadora.
 
 - **Usar o PWA**:
-  - Agora, você pode acessar a calculadora diretamente da tela inicial do seu smartphone, como um aplicativo independente.
+  - Agora, você pode acessar a calculadora diretamente da tela inicial do seu smartphone, como um aplicativo independente. Ou também realizar o dowload na sua área de trabalho do computador.
 
 ### 2. Inserir Dados e Realizar Cálculos
 
