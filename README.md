@@ -26,6 +26,25 @@ Este projeto é uma calculadora web interativa desenvolvida com HTML, CSS e Java
 - Baixe ou clone o repositório para o seu computador.
 - Abra o arquivo `index.html` em um navegador web moderno.
 
+#### Usar no Smartphone como PWA
+
+- **Iniciar o Servidor**:
+
+  - Inicialize o `index.html` usando o Live Server no seu editor de código, como o VSCode.
+
+- **Conectar o Smartphone**:
+
+  - No smartphone, abra o navegador e insira na URL o IP do seu computador seguido da porta do Live Server, por exemplo: `http://192.168.0.100:5500`.
+  - Para encontrar o IP do seu computador, use o comando `ipconfig` no Prompt de Comando (CMD) e procure o endereço IPv4 da sua conexão de rede.
+
+- **Adicionar à Tela Inicial**:
+
+  - No navegador do smartphone, toque nos três pontinhos no canto superior direito.
+  - Selecione "Adicionar à Tela Inicial" para criar um atalho para a calculadora.
+
+- **Usar o PWA**:
+  - Agora, você pode acessar a calculadora diretamente da tela inicial do seu smartphone, como um aplicativo independente.
+
 ### 2. Inserir Dados e Realizar Cálculos
 
 - **Selecionar o Tipo de Cálculo**:
