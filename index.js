@@ -113,21 +113,42 @@ document.addEventListener("DOMContentLoaded", () => {
   function calculate() {
     const selectedCalcType = calcType.value;
     let result;
+    const descriptions = {
+      none: "Cálculos Básicos",
+      mean: "Média",
+      median: "Mediana",
+      mode: "Moda",
+      power: "Potência",
+      root: "Raiz",
+      length: "Conversão de Comprimento",
+      volume: "Conversão de Volume",
+      cmToM: "CM para M",
+      mToCm: "M para CM",
+      lToMl: "L para ML",
+      mlToL: "ML para L",
+    };
+
     try {
       switch (selectedCalcType) {
         case "mean":
           result = calculateMean(input.value.split(",").map(Number));
+          addToHistory(`${descriptions.mean}: ${input.value} = ${result}`);
           break;
         case "median":
           result = calculateMedian(input.value.split(",").map(Number));
+          addToHistory(`${descriptions.median}: ${input.value} = ${result}`);
           break;
         case "mode":
           result = calculateMode(input.value.split(",").map(Number));
+          addToHistory(`${descriptions.mode}: ${input.value} = ${result}`);
           break;
         case "power":
           result = Math.pow(
             Number(baseInput.value),
             Number(exponentInput.value)
+          );
+          addToHistory(
+            `${descriptions[selectedCalcType]}: ${baseInput.value} ^ ${exponentInput.value} = ${result}`
           );
           break;
         case "root":
@@ -135,22 +156,35 @@ document.addEventListener("DOMContentLoaded", () => {
             Number(baseInput.value),
             1 / Number(exponentInput.value)
           );
+          addToHistory(
+            `${descriptions[selectedCalcType]}: ${exponentInput.value}√${baseInput.value} = ${result}`
+          );
           break;
         case "length":
           result = convertLength(Number(unitValueInput.value), unitType.value);
+          addToHistory(
+            `${descriptions[selectedCalcType]}: ${unitValueInput.value} ${
+              descriptions[unitType.value]
+            } = ${result}`
+          );
           break;
         case "volume":
           result = convertVolume(Number(unitValueInput.value), unitType.value);
+          addToHistory(
+            `${descriptions[selectedCalcType]}: ${unitValueInput.value} ${
+              descriptions[unitType.value]
+            } = ${result}`
+          );
           break;
         default:
           result = evalExpression(input.value);
+          addToHistory(`${descriptions.none}: ${input.value} = ${result}`);
       }
       if (isNaN(result) || !isFinite(result)) {
         throw new Error("Resultado inválido");
       }
 
       resultInput.value = result;
-      addToHistory(`${input.value} = ${result}`);
       resultInput.classList.remove("error");
     } catch (error) {
       resultInput.value = "Erro";
