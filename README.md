@@ -31,6 +31,12 @@ usuários.
 ### Calculadora em tema escuro
 ![Tela de prototipação tema light](/assets/dark.png)
 
+### Histórico em tema light
+![Histórico de calculos em tema light](/assets/history_light.png)
+
+### Histórico em tema dark
+![Histórico de calculos em tema dark](/assets/history_dark.png)
+
 ## Funcionalidades
 
 - **Cálculos Básicos**: Realize adição, subtração, multiplicação, divisão e cálculos com parênteses.
@@ -109,6 +115,9 @@ usuários.
 ### 7. Limpar Campos
 
 - Utilize o botão `C` para limpar todos os campos de entrada e o campo de resultado, permitindo iniciar um novo cálculo sem interferências dos valores anteriores.
+ 
+### 8. Limpar histórico de cálculos
+- Utilize o botão limpar ao lado de Histórico de cálculos para apagar todos os registros de cálculo.
 
 ## Requisitos
 

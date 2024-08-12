@@ -222,3 +222,7 @@ main[data-theme="light"] #themeSwitcher:hover, main[data-theme="light"] #toggleH
   align-items: center;
   margin-bottom: 4px;
 }
+
+#clearHistory {
+  cursor: pointer;
+}
